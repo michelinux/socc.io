@@ -1,0 +1,36 @@
+#  The contact options.
+
+- type: linkedin
+  icon: 'fab fa-linkedin'
+  url:  'https://www.linkedin.com/in/soccio'
+
+- type: email
+  icon: "fas fa-envelope"
+
+- type: github
+  icon: "fab fa-github"
+
+- type: rss
+  icon: "fas fa-rss"
+
+- type: twitter
+  icon: "fab fa-twitter"
+
+# - type: matrix
+#   icon: "fa-solid fa-message"
+#   # url: '' # TODO: 
+
+- type: mastodon
+  icon: 'fab fa-mastodon'
+  url: 'https://mastodon.online/@soccio'
+
+# Uncomment and complete the url below to enable more contact options
+#
+# - type: mastodon
+#   icon: 'fab fa-mastodon'   # icons powered by <https://fontawesome.com/>
+#   url:  ''                  # Fill with your Mastodon account page, rel="me" will be applied for verification
+#
+#
+# - type: stack-overflow
+#   icon: 'fab fa-stack-overflow'
+#   url:  ''                  # Fill with your stackoverflow homepage
