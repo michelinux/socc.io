@@ -30,7 +30,15 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
+    environment: github-pages
+    env:
+      BASE_URL: "https://socc.io"
     steps:
+      - name: Recap
+        run: |
+          echo "Deploying to ${{ env.BASE_URL }}"
+          echo "With username ${{ secrets.USERNAME }}"
+          echo "With sftp host ${{ secrets.HOST }}"
       - name: Checkout
         uses: actions/checkout@v3
       - name: Setup Ruby
@@ -45,30 +53,17 @@ jobs:
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
         # run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
-        run: bundle exec jekyll build --baseurl ${{ vars.BASE_URL }}
+        run: bundle exec jekyll build # --baseurl ${{ env.BASE_URL }}
         env:
           JEKYLL_ENV: production
-      # - name: Upload artifact
-      #   # Automatically uploads an artifact from the './_site' directory by default
-      #   uses: actions/upload-pages-artifact@v2
-      - name: Upload to socc.io
-        uses: appleboy/scp-action@v0.1.4
+      - name: Upload to socc.io via SFTP
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
-          host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
+          server: ${{ secrets.HOST }}
           port: ${{ secrets.PORT }}
-          source: "_site/*"
-          target: www/
-
-  # Deployment job
-  # deploy:
-  #   environment:
-  #     name: github-pages
-  #     url: ${{ steps.deployment.outputs.page_url }}
-  #   runs-on: ubuntu-latest
-  #   needs: build
-  #   steps:
-  #     - name: Deploy to GitHub Pages
-  #       id: deployment
-  #       uses: actions/deploy-pages@v2
+          local_path: './_site/*'
+          remote_path: 'www'
+          sftp_only: true
+          password: ${{ secrets.PASSWORD }}
+          ssh_private_key: null
