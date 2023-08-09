@@ -1,0 +1,46 @@
+name: Copy 'content' repo to socc.io
+
+on:
+  # Run once per day
+  schedule:
+    - cron: '19 5 * * *'
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# I probably don't need this, but let's put it just in case I start manually running this workflow too often
+concurrency:
+  group: "content"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: github-pages
+    
+    steps:
+      - name: ssh keys
+        run: |
+          eval `ssh-agent -s`
+          ssh-add - <<< '${{ secrets.PRIVATE_KEY_CONTENT_REPO }}'
+      - name: Get content
+        uses: actions/checkout@v3
+        with:
+          ssh-key: ${{ secrets.PRIVATE_KEY_CONTENT_REPO }}
+          repository: michelinux/content
+          ref: refs/heads/main
+      - name: list content
+        run: find *
+      - name: Upload to socc.io via SFTP
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+        with:
+          username: ${{ secrets.USERNAME }}
+          server: ${{ secrets.HOST }}
+          port: ${{ secrets.PORT }}
+          local_path: '*'
+          remote_path: 'www/content' #'content' folder must exist
+          sftp_only: true
+          password: ${{ secrets.PASSWORD }}
+          ssh_private_key: null
+        
+    
