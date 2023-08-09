@@ -31,14 +31,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     environment: github-pages
-    env:
-      BASE_URL: "https://socc.io"
     steps:
-      - name: Recap
-        run: |
-          echo "Deploying to ${{ env.BASE_URL }}"
-          echo "With username ${{ secrets.USERNAME }}"
-          echo "With sftp host ${{ secrets.HOST }}"
       - name: Checkout
         uses: actions/checkout@v3
       - name: Setup Ruby
