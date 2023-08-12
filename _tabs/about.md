@@ -6,19 +6,18 @@ published: true
 permalink: about
 icon: fa-solid fa-address-card
 order: 10
+math: true
 ---
 
-My name is Michele and I’m a Principal Engineer at Amadeus.
+My name is Michele Costantino Soccio and I’m a Principal Engineer at [Amadeus](https://amadeus.com/en). You are reading a low frequency blog about programming, technologies, software architecture, big data, languages. I am usually busy with C++, Spark, Scala, Python, not enough cloud and too much software architecture, or the other way around.
 
-You are reading a low frequency blog about programming, technologies, software architecture, big data, languages. I am usually busy with C++, Spark, Scala, Python, not enough cloud and perhaps too much software architecture.
+If you wish to contact me, do not refrain from [dropping me an email <i class="fa-regular fa-envelope"/>](javascript:sendEmail();) in English, French, Italian or Spanish.
 
-You can contact me in English, French, Italian or Spanish, preferably [via email](javascript:sendEmail();).
+The code for this blog is on [GitHub <i class="fa-brands fa-github"></i>](https://github.com/cotes2020/jekyll-theme-chirpy). All views expressed here are my own.
 
-The code for this blog is on github.
+Thanks for reading,<br/>
+Michele.
 
-All views expressed here are my own.
-
-Thanks for reading.
 
 <!-- --------------------------------------------------------------------------------------------------- -->
 <!-- Some code to avoid putting the email in clear, very much inspired by the trick used by Chirpy Theme -->
