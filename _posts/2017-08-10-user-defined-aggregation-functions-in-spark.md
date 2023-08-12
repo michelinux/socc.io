@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "User-Defined Aggregation Functions"
+title:  "User-Defined Aggregation Functions in Spark"
 date:   2017-08-12 09:18:05 +0200
-categories: spark UDAF scala
+# categories: spark UDAF scala
 ---
 
 As I’m learning Spark (and Scala) some of the topics are a little bit too difficult for me.
@@ -10,6 +10,11 @@ One of them is the **User-Defined Aggregation Functions**, a topic discussed in 
 I find the example in the book a bit _meagre_. It doesn't explain what's going on, so I decided to have a better look at those. What I wrote here is what I learned, the way I understood it. Woudl you find any mistake, please ping me on twitter, or do a pull request on this same blog.
 
 Let's say that you want to calculate the percentile of a column. Just to give you an example, if you had a table with all the income for each USA citizen plus some other data, you could use it to calculate:
+
+While learning Spark and Scala, I find some topics, like **User-Defined Aggregation Functions**, to be challenging. This topic is discussed in Chapter 5 of the book *'Spark: The Definitive Guide, 1st Edition'* by Bill Chambers and Matei Zaharia, which I highly recommend. However, I found the example in the book to be lacking in explanation. Therefore, I decided to delve deeper into it and summarize what I learned here. If you notice any mistakes, please feel free to reach out to me on Twitter or submit a pull request on this blog.
+
+Let's consider an example where you want to calculate the percentile of a column. For instance, if you have a table containing income data for each USA citizen and other related information, you can use it to perform the calculation.
+
 
 * Under which amount the poorest 10% of the population lives by state
   ```df.groupBy("state").agg(percentile("income", 0.1))```
@@ -395,7 +400,7 @@ df.groupBy("Country").agg(expr("Percentile_9_99(UnitPrice)")).show
 
 * Every time I access to `buffer` I do something like `buffer1.getInt(TOTALCOUNTER)`. How can I use the `scala` generics to write something like `buffer1.totalCounter` which looks so much more elegant?
 
-* Which one is faster. Having the function defined with the observation passed at construction time (`new Percetile(10`)) or passing the observation as a column (`lit(10)`)
+* Which one is faster. Having the function defined with the observation passed at construction time (`new Percetile(10)`) or passing the observation as a column (`lit(10)`)
 
 * What would happen if I had put `def deterministic: Boolean = false`? I did try to set it, nothing changed, I still get the right results. I suppose, and mine is only a guess, that this parameter is used by `spark` to optimise the execution.
 
@@ -404,3 +409,5 @@ df.groupBy("Country").agg(expr("Percentile_9_99(UnitPrice)")).show
 - [User Defined Aggregate Function API](https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.sql.expressions.UserDefinedAggregateFunction)
 - [Spark: The definitive guide, 1st Edition* by by Bill Chambers and Matei Zaharia](http://shop.oreilly.com/product/0636920034957.do)
 
+> **Update 2023-08-12**. This post has been imported from my previous neglected blog.
+{: .prompt-info}
