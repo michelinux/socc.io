@@ -2,8 +2,8 @@
 layout: post
 title:  "Spark and MySQL"
 date:   2017-09-29 08:22:00 +0200
-categories: spark
-tags: spark mysql JDBC
+# categories: spark
+# tags: spark mysql JDBC
 ---
 
 ## The MySQL Connector
