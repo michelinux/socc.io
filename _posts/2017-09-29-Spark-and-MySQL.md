@@ -27,7 +27,7 @@ You won't get the exception anymore.
 
 ## Connecting and reading a table
 
-Let's assume that you have a MySQL instance running, for example [using Docker on your machine]({ site.baseurl }}{% link _posts/2017-09-14-Run-MySQL-on-Mac-with-Docker.md %}).
+Let's assume that you have a MySQL instance running.
 
 You have to provide a few informations:
 * **username** and **password**
