@@ -35,3 +35,6 @@ gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 # The Chirpy theme
 gem "jekyll-theme-chirpy"
 
+# Jekyll compose to create new files with the right structure
+gem 'jekyll-compose', group: [:jekyll_plugins]
+
