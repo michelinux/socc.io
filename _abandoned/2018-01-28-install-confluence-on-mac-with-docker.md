@@ -2,8 +2,9 @@
 layout: post
 title:  "Install Atlassian Confluence on a Mac with Docker"
 date:   2018-01-29 08:22:00 +0200
-categories: docker macOS confluence
-tags: collect_list collect_set optimization spark groupby dataframe
+# categories: docker macOS confluence
+# tags: collect_list collect_set optimization spark groupby dataframe
+published: true
 ---
 
 To complete my migration from a Linux notebook to a Mac, I am finally moving my [Confluence](https://www.atlassian.com/software/confluence) installation to my MacBook Pro. (I know, it's a bit overkill to use Confluence just for my personal notes, but I really like it.)
