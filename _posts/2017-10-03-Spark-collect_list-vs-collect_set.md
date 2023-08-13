@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "collect_list vs collect_set"
+title:  "Spark collect_list vs collect_set"
 date:   2017-10-23 08:22:00 +0200
-categories: spark
-tags: collect_list collect_set optimization spark groupby dataframe
+# categories: spark
+# tags: collect_list collect_set optimization spark groupby dataframe
 ---
 
 I was wondering. Which one is faster: `collect_list` or `collect_set`? If you need your data in order and want to keep those precious duplicates, then `collect_list` is for you. If you don't care about that (for example you are sure that you won't have duplicata) you may wonder: **which `collect_*` would be faster?**
@@ -55,3 +55,6 @@ The first stage is the read from the `parquet` files that I had previously prepa
 The `collect_set` was a bit faster only when doing the `df.show(100)`. This is likely because of the `spark` optimisations: it's cheaper to get the first `x` elements if you don't care about order. If you care about order, then you have to order them all before getting the first 100 as the very last one in the input could be one of those *elected*.
 
 **TLDR**: `collect_list` is faster than `collect_set`.
+
+> **Update 2023-08-12**. This post has been imported from my previous neglected blog.
+{: .prompt-info}

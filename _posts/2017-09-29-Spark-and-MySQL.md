@@ -98,3 +98,5 @@ select * from VILLAINS;
 
 [https://dev.mysql.com/downloads/connector/j/](https://dev.mysql.com/downloads/connector/j/)
 
+> **Update 2023-08-12**. This post has been imported from my previous neglected blog.
+{: .prompt-info}
