@@ -13,6 +13,11 @@ I won't add anything that is not already well documented about `jekyll`.
 
 ## Change Date Format
 
+> I later realized that this trick is messing with the download of some js libraries. I have
+> yet to find the right way of doing it. In the while I will revert it and accept the ugly
+> American date format.
+{: .prompt-danger}
+
 I prefer reading the day before the month (sorry US people!). The Chirpy theme does not have a `en_GB`. I cannot contribute it, I am not British and I feel it would not be appropriate to provide that contribution from a non-native. So I have instead added the `en_michele`.
 
 It’s basically just the following:
