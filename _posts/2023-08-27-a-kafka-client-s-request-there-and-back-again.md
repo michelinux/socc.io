@@ -2,7 +2,7 @@
 layout: post
 title: 'A Kafka Client’s Request: There and Back Again'
 date: 2023-08-27 02:32 +0200
-published: false
+published: true
 ---
 
 ![Kafka](https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Apache_kafka_wordtype.svg/640px-Apache_kafka_wordtype.svg.png){: .right .w-25}

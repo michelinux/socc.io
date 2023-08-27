@@ -3,7 +3,7 @@ layout: post
 title: 'FoundationDB: the best kept secret of new distributed architectures - Talk
   report'
 date: 2023-08-27 02:02 +0200
-published: false
+published: true
 ---
 
 Original title: _FoundationDB : le secret le mieux gardé des nouvelles architectures distribuées !_
