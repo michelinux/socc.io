@@ -2,7 +2,7 @@
 layout: post
 title: Where to store your data in 2023?
 date: 2023-08-27 02:45 +0200
-published: false
+published: true
 ---
 
 Original Title: _Où stocker ses données en 2023 ?_

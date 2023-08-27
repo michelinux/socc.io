@@ -2,7 +2,7 @@
 layout: post
 title: Riviera DEV 2023 Trip Report, Part Two
 date: 2023-08-26 10:25 +0200
-published: false
+published: true
 ---
 
 Riviera DEV 2023 was my first Dev conference. It's held in the French Riviera, it has a great atmosphere, exceptional food and provides no excuses for you not to attend. For all those reasons, and secondary because I was one of the speakers and I am leaving at a few bus stops, I attended day 2 and 3 of the conference. This is my **Riviera DEV 2023 Trip Report, Part Two**. There is also a [Part One]({% post_url 2023-08-14-riviera-dev-2023-trip-report-part-one %}).
