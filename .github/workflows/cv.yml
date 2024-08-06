@@ -1,14 +1,14 @@
 name: Copy 'content' repo to socc.io
 
 on:
-  # Run once per day
+  # Run once per week
   schedule:
     - cron: '19 5 1 * *'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# Avoid running it at the same time as other "content" jobs, like the "cv" one
+# Avoid running it at the same time as other "content" jobs
 concurrency:
   group: "content"
   cancel-in-progress: false
@@ -27,10 +27,10 @@ jobs:
         uses: actions/checkout@v3
         with:
           ssh-key: ${{ secrets.PRIVATE_KEY_CONTENT_REPO }}
-          repository: michelinux/cv-latex
+          repository: michelinux/content
           ref: refs/heads/main
       - name: list content
-        run: find cv.pdf
+        run: find *
       - name: Upload to socc.io via SFTP
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
@@ -38,7 +38,7 @@ jobs:
           server: ${{ secrets.HOST }}
           port: ${{ secrets.PORT }}
           local_path: '*'
-          remote_path: 'www/' # I want the file availble as socc.io/cv.pdf
+          remote_path: 'www/content' #'content' folder must exist
           sftp_only: true
           password: ${{ secrets.PASSWORD }}
           ssh_private_key: null
