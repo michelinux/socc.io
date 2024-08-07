@@ -38,3 +38,5 @@ gem "jekyll-theme-chirpy"
 # Jekyll compose to create new files with the right structure
 gem 'jekyll-compose', group: [:jekyll_plugins]
 
+
+gem "jekyll-redirect-from", "~> 0.16.0"

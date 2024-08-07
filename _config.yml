@@ -1,5 +1,9 @@
 # The Site Configuration
 
+# Plugins
+plugins:
+  - jekyll-redirect-from # For the socc.io/cv
+
 # Import the theme
 theme: jekyll-theme-chirpy
 
