@@ -37,7 +37,7 @@ jobs:
           username: ${{ secrets.USERNAME }}
           server: ${{ secrets.HOST }}
           port: ${{ secrets.PORT }}
-          local_path: '*'
+          local_path: 'cv.pdf'
           remote_path: 'www/' # I want the file availble as socc.io/cv.pdf
           sftp_only: true
           password: ${{ secrets.PASSWORD }}
