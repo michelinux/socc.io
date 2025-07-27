@@ -75,24 +75,23 @@ Changes in the end were similar to the OpenMultitouchSupport:
 3. Use the local OpenMultitouchSupport lib instead of the remote one;
 4. Manual sign the app (not really a change, it's a manual operation)
 
-![It's almost correct](/assets/img/2025-07-27-barilla.jpg)
-
 ### Considerations
+
+![It's almost correct](/assets/img/2025-07-27-barilla.jpg){: .right .w-25}
 
 It was relatively easy to do, as changes were not that big. Without Gemini-Cli (or any other AI tool) it would have taken me far longer and I would have not even approached it and more savily I would have spent a few hours reading a good book on the beach.
 
-I am not going to publish any compiled version, but you can find the changes committed in:
+I am not going to publish any compiled version, nor I am going to maintain it. You can find the changes committed in:
 
-https://github.com/michelinux/OpenMultitouchSupport/tree/macos13
+* [https://github.com/michelinux/OpenMultitouchSupport/tree/macos13](https://github.com/michelinux/OpenMultitouchSupport/tree/macos13)
+* [https://github.com/michelinux/TrackWeight/tree/macos13](https://github.com/michelinux/TrackWeight/tree/macos13)
 
-https://github.com/michelinux/TrackWeight/tree/macos13
+### Something I don't fully understand 🤷‍♂️
 
-### Something I don't fully understand
-
-The `project.pbxproj` contains all the dependencies and their UUID. What happens with the local version of a library? Do I get a new UUID each time I change something? :man_shrugging:
+The `project.pbxproj` contains all the dependencies and their UUID. What happens with the local version of a library? Do I get a new UUID each time I change something?
 
 ### Small rants section
 
-The pressure support was present also on iPhones and on Apple Watch, and it was called 3D Touch. My Apple Watch 5 did have it, while following models did not. And then with an update Apple decided to remove it also from my watch to harmonise the experience across the line. A bit like saying that since those who had a recent model didn't have 3d Touch, why should a poor guy with an older model still enjoy it?
+Ran number one. The pressure support was present also on iPhones and on Apple Watch, and it was called 3D Touch. My Apple Watch 5 did have it and I used it a lot to watch live photos. Following models did not and with an update Apple decided to disable it from the Watch 5. It was to harmonise the experience across the line, but I paid good money (well, it was a gift) also for that feature. A bit like saying that since those who had a recent model didn't have 3d Touch, why should a poor guy with an older model still enjoy it? The result is that I don't watch photos anymore on my watch.
 
 Another rant is about Swift 6. Once can easily install Swift 6 on an old computer running Linux (I tried, it works), but for some reason if your MacOS is 2 years old you are already completely left behind.
