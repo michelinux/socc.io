@@ -14,16 +14,19 @@
   icon: "fas fa-rss"
 
 - type: twitter
-  icon: "fab fa-twitter"
+  icon: "fab fa-x-twitter"
 
 # - type: matrix
 #   icon: "fa-solid fa-message"
 #   # url: '' # TODO: 
 
-- type: mastodon
-  icon: 'fab fa-mastodon'
-  url: 'https://mastodon.online/@soccio'
+# - type: mastodon
+#  icon: 'fab fa-mastodon'
+#  url: 'https://mastodon.online/@soccio'
 
+- type: bluesky
+  icon: "fab fa-bluesky"
+  url: "https://bsky.app/profile/socc.io"
 # Uncomment and complete the url below to enable more contact options
 #
 # - type: mastodon
